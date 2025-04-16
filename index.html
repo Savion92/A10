@@ -22,11 +22,16 @@
       This page is entirely dedicated toward setting and retrieving a cookie
     </h1>
     <h2>
-      In the h3 below, you'll see a cookie I've set, or a message that implies the cookie hasn't been set.
+      In the h3 below, you'll see a cookie I've set, or a message that implies
+      the cookie hasn't been set.
     </h2>
     <h3 id="nameContainer">I have no name</h3>
+  </body>
+  <footer>&copy;April 16, 2025 Savion Sweeney</footer>
   <script>
     setCookie("Savion");
-    document.getElementById("nameContainer").innerHTML = `My name is ${getCookie()}`;
+    document.getElementById(
+      "nameContainer"
+    ).innerHTML = `My name is ${getCookie()}`;
   </script>
 </html>
