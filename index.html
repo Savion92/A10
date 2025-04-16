@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie monster</title>
+    <script>
+      const setCookie = (name) => {
+        document.cookie = `firstName=${name}`;
+      };
+
+      const getCookie = () => {
+        let cookie = decodeURIComponent(document.cookie);
+        let splitCookie = cookie.split(";");
+        return splitCookie[0].split("=")[1];
+      };
+    </script>
+  </head>
+  <body>
+    <h1>
+      This page is entirely dedicated toward setting and retrieving a cookie
+    </h1>
+    <h2>
+      In the h3 below, you'll see a cookie I've set, or a message that implies the cookie hasn't been set.
+    </h2>
+    <h3 id="nameContainer">I have no name</h3>
+  <script>
+    setCookie("Savion");
+    document.getElementById("nameContainer").innerHTML = `My name is ${getCookie()}`;
+  </script>
+</html>
